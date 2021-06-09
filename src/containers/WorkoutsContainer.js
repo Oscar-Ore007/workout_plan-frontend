@@ -14,7 +14,7 @@ class WorkoutsContainer extends React.Component {
     render() {
         return (
             <div>
-                <WorkoutInput /> 
+                <WorkoutInput /> <br></br>
                 <Workouts workouts={this.props.workouts} /> 
             </div>
         )
