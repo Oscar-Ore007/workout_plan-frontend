@@ -18,6 +18,10 @@ class WorkoutInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addWorkout(this.state) 
+        this.setState({
+            name: '',
+            duration: ''
+        })
 
     }
     
