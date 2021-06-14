@@ -16,7 +16,7 @@ console.log(workout)
         <h2>
             {workout ? workout.name : null} - {workout ? workout.duration : null}
         </h2>
-        <ExercisesContainer workout={workout}/> 
+            <ExercisesContainer workout={workout}/> 
         </div>
     )
 
