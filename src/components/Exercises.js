@@ -1,14 +1,28 @@
-import React from 'react' 
+import React from 'react'
+import {connect} from 'react-redux'
+import {deleteExercise} from '../actions/deleteExercise'
 
-const Exercises = (props) => {
-    return( 
-        <div>
-            {props.exercises && props.exercises.map(exercise =>
-                <li key={exercise.id}>{exercise.reps} - {exercise.sets} - {exercise.date} - {exercise.description} </li>
+class Exercises extends React.Component {
 
-                )}
-        </div>
-    )
+state = {}
+
+ handleDelete = (exercise) => {
+    this.props.deleteExercise(exercise.id, exercise.workout_id)
+  }
+
+vote = (id) => {
+  this.state[id] ? this.setState({[id]: this.state[id] += 1}) : this.setState({[id]: 1})
 }
 
-export default Exercises 
+render() {
+  return (
+      <div>
+        {this.props.exercises && this.props.exercises.map(exercise =>
+          <li key={exercise.id}>{exercise.date} - {exercise.reps} - {exercise.description}  <button onClick={() => this.vote(exercise.id)}>Vote {this.state[exercise.id] ? this.state[exercise.id] : 0}</button><button onClick={() => this.handleDelete(exercise)}>Delete</button></li>
+        )}
+      </div>
+    )
+  }
+}
+
+export default connect(null, {deleteExercise})(Exercises)

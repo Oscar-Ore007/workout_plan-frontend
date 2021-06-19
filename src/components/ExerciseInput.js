@@ -1,6 +1,6 @@
 import React from 'react' 
 import {connect} from 'react-redux'
-import  addExercise from '../actions/addExercise'
+import {addExercise} from '../actions/addExercise'
 
 class ExerciseInput extends React. Component {
 
@@ -38,4 +38,4 @@ class ExerciseInput extends React. Component {
    }
 }
 
-export default connect(null, {addExercise}) ExerciseInput; 
+export default connect(null, {addExercise})(ExerciseInput)
