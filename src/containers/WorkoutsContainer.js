@@ -5,6 +5,7 @@ import {fetchWorkouts} from '../actions/fetchWorkouts'
 import Workouts from '../components/Workouts'
 import Workout from '../components/Workout'
 import WorkoutInput from '../components/WorkoutInput'
+import NavBar from '../components/NavBar'
 
 
 class WorkoutsContainer extends React.Component {
