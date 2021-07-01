@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
 import {BrowserRouter as Router} from 'react-router-dom'
 import workoutReducer from './reducers/workoutReducer'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App';
 
@@ -22,9 +22,8 @@ ReactDOM.render(
     <Router>
       <App />
     </Router>
-  </Provider>
-      ,
-     document.getElementById('root'));
+  </Provider>,
+    document.getElementById('root'));
  
 
 

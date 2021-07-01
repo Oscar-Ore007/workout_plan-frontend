@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
 import {fetchWorkouts} from '../actions/fetchWorkouts'
 import Workouts from '../components/Workouts'
@@ -17,12 +17,11 @@ class WorkoutsContainer extends React.Component {
     render() {
         return (
             <div>
+                 <NavBar/> 
                 <Switch>
-
-
                     <Route path='/workouts/new' component={WorkoutInput}/> 
                     <Route path='/workouts/:id' render={(routerProps) => <Workout {...routerProps} workouts={this.props.workouts}/>}/>
-                    <Route exact path='/workouts' render={(routerProps) => <Workouts {...routerProps} workouts={this.props.workouts}/>}/>
+                    <Route path='/workouts' render={(routerProps) => <Workouts {...routerProps} workouts={this.props.workouts}/>}/>
                 </Switch>
             </div>
         )

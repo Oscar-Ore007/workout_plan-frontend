@@ -1,4 +1,4 @@
-export const editWokrout = (data) => {
+export const editWorkout = (data) => {
     return (dispatch) => {
       fetch(`http://localhost:3000/api/v1/workouts/${data.id}`, {
         headers: {
