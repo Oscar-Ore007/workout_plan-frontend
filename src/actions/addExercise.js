@@ -9,6 +9,13 @@ export const addExercise = (exercise, workoutId) => {
             body: JSON.stringify(exercise)
         })
         .then(response => response.json())
-        .then(workout => dispatch({type: 'ADD_EXERCISE', payload: workout}))
+        .then(workout => {
+            if (workout.error) {
+                alert(workout.error)
+            } else {
+            dispatch({type: 'ADD_EXERCISE', payload: workout})
+                }
+            }
+        )
     }
 }

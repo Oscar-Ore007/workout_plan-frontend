@@ -10,5 +10,4 @@ export function fetchWorkouts() {
         payload: workouts 
     }))
     }
-    
 }

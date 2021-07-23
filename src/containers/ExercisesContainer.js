@@ -10,7 +10,7 @@ class ExerciseContainer extends React.Component {
         render() {
             return (
                 <div>
-                    <ExerciseInput exercise={this.props.workout} />
+                    <ExerciseInput exercise={this.props.workout} /><br/> 
                     <Exercises exercises={this.props.workout && this.props.workout.exercises} />  
                 </div>
             )
