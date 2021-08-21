@@ -20,9 +20,9 @@ class WorkoutsContainer extends React.Component {
 
     render() {
         return (
-            <div>
-                <NavBar/> 
+            <div className="body">
                 <Switch>
+                    <Route exact path='/' component={Home}/> 
                     <Route path='/workouts/new' component={WorkoutInput}/> 
                     <Route path='/workouts/:id' render={(routerProps) => <Workout {...routerProps} workouts={this.props.workouts}/>}/>
                     <Route path='/workouts' render={(routerProps) => <Workouts {...routerProps} workouts={this.props.workouts}/>}/>

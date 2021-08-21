@@ -1,6 +1,7 @@
 export const addExercise = (exercise, workoutId) => {
+    exercise["workout_id"] = workoutId
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/workouts/${workoutId}/exercises`, {
+        fetch(`http://localhost:3000/api/v1/exercises`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -9,13 +10,6 @@ export const addExercise = (exercise, workoutId) => {
             body: JSON.stringify(exercise)
         })
         .then(response => response.json())
-        .then(workout => {
-            if (workout.error) {
-                alert(workout.error)
-            } else {
-            dispatch({type: 'ADD_EXERCISE', payload: workout})
-                }
-            }
-        )
+        .then(workout => dispatch({type: 'ADD_EXERCISE', payload: workout}))
     }
 }

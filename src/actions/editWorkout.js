@@ -8,8 +8,11 @@ export const editWorkout = (data) => {
         method: 'PATCH',
         body: JSON.stringify(data)
       })
-      .then(response => response.json())
-      .then(workout => dispatch({type: 'EDIT_WORKOUT', payload: workout}))
+      .then(resp => resp.json())
+      .then(data => dispatch({
+        type: 'EDIT_WORKOUT', 
+        payload: data
+      }))
     }
   
   }

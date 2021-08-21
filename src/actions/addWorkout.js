@@ -10,8 +10,11 @@ export const addWorkout = (data) => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(workout => dispatch({type: 'ADD_WORKOUT', payload: workout}))
-    }
-
-    
-}
+        .then((data) => {
+            return dispatch({
+                type: 'ADD_WORKOUT',
+                payload: data
+            });
+        });
+    };
+};
