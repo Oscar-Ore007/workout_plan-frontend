@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import WorkoutsContainer from './containers/WorkoutsContainer'
+import './App.css';
 
 
 

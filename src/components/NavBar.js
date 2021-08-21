@@ -1,13 +1,16 @@
-import React from 'react' 
-import {Link} from 'react-router-dom'
+import React from 'react' ;
+import {Link, NavLink} from 'react-router-dom'
 
 const NavBar = (props) => {
 
     return (
-        <div>
-            <Link to='/workouts' style={{paddingRight: '10px'}}> Workouts </Link>
-            <Link to='/workouts/new'> Add Workout </Link>
+    <nav className="topnav">
+        <div className="container">
+            <Link to='/'>HOME</Link>
+            <NavLink to='/workouts'> WORKOUTS </NavLink>
+            <NavLink to='/workouts/new'> ADD A WORKOUT </NavLink>
         </div>
+    </nav>
     )
 }
 
