@@ -2,11 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
 import {fetchWorkouts} from '../actions/fetchWorkouts'
+import WorkoutInput from '../components/WorkoutInput'
 import Workouts from '../components/Workouts'
 import Workout from '../components/Workout'
-import WorkoutInput from '../components/WorkoutInput'
-import NavBar from '../components/NavBar'
-import About from '../components/About'
 import Home from '../components/Home'
 
 
