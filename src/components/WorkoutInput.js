@@ -27,17 +27,33 @@ class WorkoutInput extends React.Component {
     
     render() {
         return (
-            <div>
+            <div className='new-collection-card'>
+                <h2>Create Workout</h2>
                <form onSubmit={this.handleSubmit}>
-                   <label>Workout Name</label>
-                   <input type='text' placeholder='name' value={this.state.name} name="name" onChange={this.handleChange}/> <br></br>
-                   <label>Workout Duration</label>
-                   <input type='integer' placeholder='Duration in Minutes' value={this.state.duration} name="duration" onChange={this.handleChange}/> 
+                   <label>Workout Name:</label>
+                   <input 
+                        type='text' 
+                        placeholder='name' 
+                        name="name"
+                        onChange={this.handleChange}
+                        value={this.state.name}
+                        /> 
+                        <br></br>
+                        <br></br>
+                   <label>Workout Duration:</label>
+                   <input 
+                    type='integer' 
+                    placeholder='Duration in Minutes' 
+                    onChange={this.handleChange}
+                    value={this.state.duration} 
+                    />
+                    <br></br>
+                    <br></br> 
                    <input type="submit"/>
                </form>
             </div>
-        )
+        );
     }
 }
 
-export default connect(null, {addWorkout})(WorkoutInput) 
+export default connect(null, {addWorkout})(WorkoutInput);

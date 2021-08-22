@@ -1,25 +1,35 @@
-import React from 'react';
-import {Redirect} from 'react-router-dom'
-import WorkoutEdit from './WorkoutEdit'
-
-import ExercisesContainer from '../containers/ExercisesContainer'
+import React, { useState } from 'react';
+import WorkoutEdit from './WorkoutEdit';
+import ExercisesContainer from '../containers/ExercisesContainer';
 
 const Workout = (props) => {
 
-    console.log(props)
+    const [isEditing, setIsEditing] = useState(false)
+
+    const handleEditClick = () => {
+        setIsEditing(!isEditing)
+    }
+
+    const endEditing = () => {
+        setIsEditing(false)
+    }
 
 
-let workout = props.workouts[props.match.params.id - 1]
-console.log(workout)
+let workout = props.workouts.filter(workout => workout.id == props.match.params.id)[0]
+
     return (
-        <div>
-        <h2>
-            {workout ? workout.name : null} - {workout ? workout.duration : null}
-        </h2>
-            <ExercisesContainer workout={workout}/> <br/> 
+    <React.Fragment>
+        <div className="workout">
+            {workout ? <h2>{workout.name}</h2> : null}
+            <br></br>
             <h3>Edit Workout</h3>
-            <WorkoutEdit workout={workout}/> 
+            <button onClick={() => handleEditClick(workout)}>EDIT</button> 
         </div>
+       <div>
+            { isEditing && <WorkoutEdit workout={workout} endEditing={endEditing}/>}
+            <ExercisesContainer workout={workout}/> 
+        </div> 
+</React.Fragment>
     )
 
 }

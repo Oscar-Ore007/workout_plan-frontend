@@ -1,14 +1,15 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
-import Workout from './Workout' 
+import {Link} from 'react-router-dom';
+
 
 const Workouts = (props) => {
     return (
         <div>
+            <h3>Your Workouts</h3>
           {props.workouts.map(workout => 
-          <li key={workout.id}>
+          <div key={workout.id} className="workout-card">
             <Link to={`/workouts/${workout.id}`}>{workout.name}</Link> 
-            </li>)}
+            </div>)}
         </div>
     )
 }
