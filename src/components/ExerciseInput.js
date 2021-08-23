@@ -2,12 +2,15 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addExercise} from '../actions/addExercise'
 
-class ExerciseInput extends React. Component {
+class ExerciseInput extends React.Component {
 
     state = {
-        reps: '0',
-        sets: ''
-    }
+        reps: '',
+        sets: '',
+        date: '',
+        description: ''
+      
+    };
 
     handleChange = (event) => {
         this.setState({
@@ -19,19 +22,55 @@ class ExerciseInput extends React. Component {
         event.prevent.default()
         this.props.addExercise(this.state, this.props.workout.id)
         this.setState({
-            reps: '0',
-            sets: ''
-        })
-    }
+            reps: '',
+            sets: '',
+            date: '',
+            description: ''
+        });
+    };
    render() {
        return (
-           <div>
-               <form>
+           <div className='new-exercise-card'>
+               <form onSubmit={this.handleSubmit}>
+                   <h1>Add an Exercise to this Workout:</h1>
                    <label>Exercise Reps: </label>
-                   <input type="integer" /> 
+                   <input 
+                        type="integer" 
+                        placeholder='0'
+                        name='reps'
+                        value={this.state.reps}
+                        onChange={this.handleChange}
+                        /> 
+                    <br></br>
+                    <br></br>
                    <label>Exercise Sets:</label>
-                   <input type="integer" name='sets' value={this.state.sets} onChange={this.handleChange} /> 
-                   <input type="submit" />
+                   <input 
+                    type="integer" 
+                    placeholder='0'
+                    name='sets' 
+                    value={this.state.sets} 
+                    onChange={this.handleChange} 
+                    /> 
+                    <br></br>
+                    <br></br>
+                <label>Date:</label>
+                <input 
+                    type='date'
+                    placeholder= 'DD-MM-YYYY'
+                    name='date'
+                    value={this.state.date}
+                    onChange={this.handleChange}
+                /> 
+                <label>Description:</label>
+                    <input
+                    type='text'
+                    placeholder='description'
+                    value={this.state.description}
+                    onChange={this.handleChange}
+                    />
+                <br></br>
+                <br></br>
+                   <input type="submit"></input>
                </form>
            </div>
        )

@@ -29,10 +29,10 @@ class ExerciseContainer extends React.Component {
             return (
                 <div>
                     {
-                        !this.state.exerciseToBeEdited && <ExerciseInput workout={this.props.workout} />
+                        !this.state.exerciseToBeEdited && <ExerciseInput workout={this.props.workout}/>
                     }
                     {
-                        this.state.exerciseToBeEdited && <ExerciseInput exercise={this.state.exerciseToBeEdited} onSave={this.hideEdit} />
+                        this.state.exerciseToBeEdited && <ExerciseEdit exercise={this.state.exerciseToBeEdited} onSave={this.hideEdit} />
                     }
                     <Exercises exercises={this.props.workout && this.props.workout.exercises} onEdit={this.handleEdit} />
                 </div>

@@ -9,7 +9,7 @@ export const addExercise = (exercise, workoutId) => {
             },
             body: JSON.stringify(exercise)
         })
-        .then(response => response.json())
+        .then(resp => resp.json())
         .then(workout => dispatch({type: 'ADD_EXERCISE', payload: workout}))
     }
 }

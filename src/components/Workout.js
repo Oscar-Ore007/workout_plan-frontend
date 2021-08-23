@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import WorkoutEdit from './WorkoutEdit';
 import ExercisesContainer from '../containers/ExercisesContainer';
+import WorkoutEdit from './WorkoutEdit';
+
 
 const Workout = (props) => {
 

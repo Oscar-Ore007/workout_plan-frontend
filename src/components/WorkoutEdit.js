@@ -34,11 +34,11 @@ class WorkoutEdit extends React.Component {
             <div className="edit-workout-card">
                 <h1>Edit Workout</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Edit Workout name: </label>
-                    <input type='text' name='Name' onChange={this.handleChange} defaultValue={this.props.workout.name}/><br></br>
+                    <label>Edit Workout:</label>
+                    <input type="text" name="name" onChange={this.handleChange} defaultValue={this.props.workout.name}/><br></br>
                     <br></br>
                     <label>Workout Duration: </label>
-                    <input type='text' placeholder='Duration' onChange={this.handleChange} defaultValue={this.props.workout.duration}/><br></br>
+                    <input type="text" placeholder="duration" onChange={this.handleChange} defaultValue={this.props.workout.duration}/><br></br>
                     <br></br>
                     <input type="submit" value="Update Workout"/> 
                 </form>

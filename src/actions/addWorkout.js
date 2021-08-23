@@ -9,7 +9,7 @@ export const addWorkout = (data) => {
             method: 'POST',
             body: JSON.stringify(data)
         })
-        .then(response => response.json())
+        .then(resp => resp.json())
         .then((data) => {
             return dispatch({
                 type: 'ADD_WORKOUT',

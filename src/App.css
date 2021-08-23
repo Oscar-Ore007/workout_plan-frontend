@@ -1,8 +1,141 @@
+/* Text/formatting */
 body {
-    back-ground-color: #FFFF
-}
-
-.Home {
+    background-color: #FFFFFF;
+  }
+  
+  header,
+  h1 {
     text-align: center;
-    background-color: firebrick;
-}
+    color: #010101;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #010101;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #010101;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  h4 {
+    text-align: center;
+    color: #010101;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  li {
+    font-size: 18px;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  form {
+    font-size: 16px;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  input {
+    font-size: 14px;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+
+  button {
+    /* position: relative; */
+    font-size: 14px;
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: #008080;
+    color:#FAF3F3;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 5px;
+    /* justify-self: center; */
+  }
+
+  button:hover {
+    background-color: #FAF3F3;
+    color: #F365;
+  }
+
+
+
+  .topnav {
+      background-color: #008080;
+      overflow: hidden;
+    }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    color: #000000
+  }
+  
+  .topnav a.active {
+    color: #000000;
+  }
+
+  /* card display */
+
+  .card {
+    text-align: center;
+    padding: 1rem;
+    width: 23rem;
+    height: 40rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+  }
+
+  .workout-card {
+    text-align: center;
+    padding: 1rem;
+    width: 23 rem;
+    height: 23 rem;
+    display: inline-grid;
+    margin: 1rem 2rem
+
+  }
+
+  .workout{
+    text-align: center;
+
+  }
+
+  .edit-card {
+    background-color: #EAE1DD;
+    text-align: center;
+    padding: 30px;
+
+  }
+
+  .edit-workout-card {
+    text-align: center;
+    padding: 30px;
+    background-color: #F7F7F7;
+
+  }
+
+  .new-piece-card {
+    text-align: center;
+  }
+
+
+
+  .homepage {
+    text-align: center;
+    background-color: #F9F8F7;
+    /* height: 100%;
+    width: 100%; */
+    /* add a class to the image to override.  */
+  }
