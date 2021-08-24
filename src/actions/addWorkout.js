@@ -4,7 +4,7 @@ export const addWorkout = (data) => {
         fetch('http://localhost:3000/api/v1/workouts', {
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                Accept: 'application/json'
             },
             method: 'POST',
             body: JSON.stringify(data)

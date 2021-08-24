@@ -5,9 +5,9 @@ import {addWorkout} from '../actions/addWorkout'
 class WorkoutInput extends React.Component {
     
     state = {
-        name: '', 
-        duration: ''
-    }
+        name: "", 
+        duration: ""
+    };
 
     handleChange = (event) => {
         this.setState({
@@ -19,21 +19,21 @@ class WorkoutInput extends React.Component {
         event.preventDefault()
         this.props.addWorkout(this.state) 
         this.setState({
-            name: '',
-            duration: ''
-        })
+            name: "",
+            duration: ""
+        });
 
-    }
+    };
     
     render() {
         return (
-            <div className='new-collection-card'>
+            <div className='new-workout-card'>
                 <h2>Create Workout</h2>
                <form onSubmit={this.handleSubmit}>
                    <label>Workout Name:</label>
                    <input 
                         type='text' 
-                        placeholder='name' 
+                        placeholder='Name' 
                         name="name"
                         onChange={this.handleChange}
                         value={this.state.name}
@@ -44,6 +44,7 @@ class WorkoutInput extends React.Component {
                    <input 
                     type='integer' 
                     placeholder='Duration in Minutes' 
+                    name='duration'
                     onChange={this.handleChange}
                     value={this.state.duration} 
                     />

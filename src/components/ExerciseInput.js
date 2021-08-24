@@ -1,14 +1,14 @@
-import React from 'react' 
-import {connect} from 'react-redux'
-import {addExercise} from '../actions/addExercise'
+import React from "react";
+import {connect} from "react-redux";
+import {addExercise} from "../actions/addExercise";
 
 class ExerciseInput extends React.Component {
 
     state = {
-        reps: '',
-        sets: '',
-        date: '',
-        description: ''
+        reps: "",
+        sets: "",
+        date: "",
+        description: ""
       
     };
 
@@ -22,10 +22,10 @@ class ExerciseInput extends React.Component {
         event.prevent.default()
         this.props.addExercise(this.state, this.props.workout.id)
         this.setState({
-            reps: '',
-            sets: '',
-            date: '',
-            description: ''
+            reps: "",
+            sets: "",
+            date: "",
+            description: ""
         });
     };
    render() {
@@ -61,10 +61,13 @@ class ExerciseInput extends React.Component {
                     value={this.state.date}
                     onChange={this.handleChange}
                 /> 
+                <br></br>
+                <br></br>
                 <label>Description:</label>
                     <input
                     type='text'
                     placeholder='description'
+                    name='description'
                     value={this.state.description}
                     onChange={this.handleChange}
                     />

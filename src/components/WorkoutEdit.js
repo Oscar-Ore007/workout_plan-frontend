@@ -38,7 +38,7 @@ class WorkoutEdit extends React.Component {
                     <input type="text" name="name" onChange={this.handleChange} defaultValue={this.props.workout.name}/><br></br>
                     <br></br>
                     <label>Workout Duration: </label>
-                    <input type="text" placeholder="duration" onChange={this.handleChange} defaultValue={this.props.workout.duration}/><br></br>
+                    <input type="integer" placeholder="duration" name="duration" onChange={this.handleChange} defaultValue={this.props.workout.duration}/><br></br>
                     <br></br>
                     <input type="submit" value="Update Workout"/> 
                 </form>
