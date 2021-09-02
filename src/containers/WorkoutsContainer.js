@@ -6,6 +6,7 @@ import WorkoutInput from '../components/WorkoutInput'
 import Workouts from '../components/Workouts'
 import Workout from '../components/Workout'
 import Home from '../components/Home'
+import NewFeature from '../components/NewFeature'
 
 
 
@@ -21,6 +22,7 @@ class WorkoutsContainer extends React.Component {
             <div className="body">
                 <Switch>
                     <Route exact path='/' component={Home}/> 
+                    <Route path ='/NewFeature'component={NewFeature} /> 
                     <Route path='/workouts/new' component={WorkoutInput}/> 
                     <Route path='/workouts/:id' render={(routerProps) => <Workout {...routerProps} workouts={this.props.workouts}/>}/>
                     <Route path='/workouts' render={(routerProps) => <Workouts {...routerProps} workouts={this.props.workouts}/>}/>
